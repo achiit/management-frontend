@@ -1,0 +1,28 @@
+<!-- employee-list.component.html -->
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Designation</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Profile Picture</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.first_name }}</td>
+            <td>{{ employee.last_name }}</td>
+            <td>{{ employee.designation }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.phone_number }}</td>
+            <td>
+                <img *ngIf="employee.profile_pic" [src]="employee.profile_pic" alt="Profile Pic" width="50">
+                <span *ngIf="!employee.profile_pic">N/A</span>
+            </td>
+        </tr>
+    </tbody>
+</table>

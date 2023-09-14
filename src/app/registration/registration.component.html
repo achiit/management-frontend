@@ -1,0 +1,122 @@
+<body>
+
+    <div class="wrapper">
+      <h2>Add Employee</h2>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+      <div><span class="dot"></span></div>
+    </div>
+
+  <div class="registration-form">
+    
+    <form (submit)="registerEmployee()">
+      <div id="left" class="container">
+        <div class="form-group">
+          <div class="form-row">
+            <label for="first_name">First Name:</label>
+            <input type="text" placeholder="First Name" id="first_name" [(ngModel)]="employee.first_name" name="first_name" required>
+          </div>
+          <div class="form-row">
+            <label for="designation">Designation:</label>
+            <input type="text" placeholder="Designation" id="designation" [(ngModel)]="employee.designation" name="designation" required>
+          </div>
+          <div class="form-row">
+            <label for="rate_type">Rate Type:</label>
+            <select id="rate_type" [(ngModel)]="employee.rate_type" name="rate_type" required>
+              <option value="hourly">Hourly</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Email" id="email" [(ngModel)]="employee.email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="address_line1">Address Line 1:</label>
+            <textarea placeholder="Address line 1" id="address_line1" [(ngModel)]="employee.address_line1" name="address_line1"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="profile_pic">Profile Picture:</label>
+            <input type="file" id="profile_pic" (change)="onFileSelected($event)" name="profile_pic">
+          </div>
+          <div class="form-row">
+            <label for="city">City:</label>
+            <input type="text" placeholder="City" id="city" [(ngModel)]="employee.city" name="city">
+          </div>
+        </div>
+      </div>
+      <div id="right" class="container">
+        <div class="form-group">
+          <div class="form-row">
+            <label for="last_name">Last Name:</label>
+            <input type="text" placeholder="Last Name" id="last_name" [(ngModel)]="employee.last_name" name="last_name" required>
+          </div>
+          <div class="form-row">
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" placeholder="Phone" id="phone_number" [(ngModel)]="employee.phone_number" name="phone_number">
+          </div>
+          <div class="form-row">
+            <label for="salary">Salary:</label>
+            <input type="number" placeholder="Salary" id="salary" [(ngModel)]="employee.salary" name="salary">
+          </div>
+          <div class="form-row">
+            <label for="blood_group">Blood Group:</label>
+            <input type="text" placeholder="Blood Group" id="blood_group" [(ngModel)]="employee.blood_group" name="blood_group">
+          </div>
+          <div class="form-row">
+            <label for="address_line2">Address Line 2:</label>
+            <textarea placeholder="Address line 2" id="address_line2" [(ngModel)]="employee.address_line2" name="address_line2"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="country">Country:</label>
+            <select id="country" [(ngModel)]="employee.country" name="country" required>
+              <option value="Argentina">Argentina</option>
+              <option value="Australia">Australia</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Canada">Canada</option>
+              <option value="China">China</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="India" selected>India</option> <!-- Set "selected" for the default option -->
+              <option value="Indonesia">Indonesia</option>
+              <option value="Italy">Italy</option>
+              <option value="Japan">Japan</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Russia">Russia</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Korea">South Korea</option>
+              <option value="Turkey">Turkey</option>
+              <option value="U.K.">U.K.</option>
+              <option value="U.S.">U.S.</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="zipcode">ZIP Code:</label>
+            <input type="text" placeholder="ZipCode" id="zipcode" [(ngModel)]="employee.zipcode" name="zipcode">
+          </div>
+          <div class="btn"><button type="submit">Register</button></div>
+        </div>
+      </div>
+      <div *ngIf="emailExistsError" class="error-message">
+        Email already exists. Please reload the page and use a different email.
+      </div>
+      
+      
+    </form>
+  </div>
+
+</body>
