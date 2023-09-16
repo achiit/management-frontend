@@ -1,0 +1,88 @@
+
+    <div class="container">
+        <h2>Update Employee</h2>
+        <form (ngSubmit)="updateEmployee()" class="form-container">
+            <div class="form-left">
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" class="form-control" id="first_name" [(ngModel)]="updatedEmployee.first_name" name="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" class="form-control" id="last_name" [(ngModel)]="updatedEmployee.last_name" name="last_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="designation">Designation:</label>
+                    <input type="text" class="form-control" id="designation" [(ngModel)]="updatedEmployee.designation" name="designation" required>
+                </div>
+                <div class="form-group">
+                    <label for="rate_type">Rate Type:</label>
+                    <select class="form-control" id="rate_type" [(ngModel)]="updatedEmployee.rate_type" name="rate_type" required>
+                        <option value="hourly">Hourly</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" [(ngModel)]="updatedEmployee.email" name="email" required>
+                </div>
+            </div>
+            <div class="form-right">
+                <div class="form-group">
+                    <label for="address_line1">Address Line 1:</label>
+                    <input type="text" class="form-control" id="address_line1" [(ngModel)]="updatedEmployee.address_line1" name="address_line1">
+                </div>
+                <div class="form-group">
+                    <label for="address_line2">Address Line 2:</label>
+                    <input type="text" class="form-control" id="address_line2" [(ngModel)]="updatedEmployee.address_line2" name="address_line2">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city" [(ngModel)]="updatedEmployee.city" name="city">
+                </div>
+                <div class="form-group">
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone_number" [(ngModel)]="updatedEmployee.phone_number" name="phone_number">
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary:</label>
+                    <input type="number" class="form-control" id="salary" [(ngModel)]="updatedEmployee.salary" name="salary">
+                </div>
+            </div>
+            <div class="form-group" id="blood">
+                <label for="blood_group">Blood Group:</label>
+                <input type="text" class="form-control" id="blood_group" [(ngModel)]="updatedEmployee.blood_group" name="blood_group">
+            </div>
+            <div class="form-group" id="country">
+                <label for="country">Country:</label>
+                <select id="ctext" [(ngModel)]="updatedEmployee.country" name="country" required>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="China">China</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="India" selected>India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="U.K.">U.K.</option>
+                    <option value="U.S.">U.S.</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="zipcode">ZIP Code:</label>
+                <input type="text" class="form-control" id="zipcode" [(ngModel)]="updatedEmployee.zipcode" name="zipcode">
+            </div>
+            <button type="submit" class="btn btn-primary">Update Employee</button>
+        </form>
+    </div>
+

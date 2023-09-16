@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -12,7 +14,7 @@ export class RegistrationComponent {
   emailExistsError: boolean = false;
   successmessage: string = "";
 
-  constructor(private employeeService: EmployeeService,private snackBar: MatSnackBar ) {}
+  constructor(private employeeService: EmployeeService,private snackBar: MatSnackBar,private router: Router ) {}
 
   registerEmployee() {
     this.emailExistsError = false;
@@ -55,6 +57,10 @@ export class RegistrationComponent {
     // Reset the employee object and file input
     this.employee = {};
     this.profilePicFile = null;
+  }
+
+  navigateToEmployeeList() {
+    this.router.navigate(['/employeelist']); // Replace 'employee-list' with the actual route to the employee list page
   }
 
   private isFormValid(): boolean {

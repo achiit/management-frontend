@@ -1,0 +1,66 @@
+/* Apply these styles to your table and its elements */
+
+/* Style for the entire table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  /* Style for table header row */
+  thead {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Style for table header cells */
+  thead th {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  /* Style for table body rows */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for table body cells */
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style for delete button */
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Style for delete button on hover */
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+
+  .update-button {
+    background-color: #55e742;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Style for delete button on hover */
+  .update-button:hover {
+    background-color: #4c9f42;
+  }
+  

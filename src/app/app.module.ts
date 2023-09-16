@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component'; // Import the registration component
 import { EmployeeService } from './employee.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { EmployeeListComponent } from './employee-list/employee-list.component'; // Import the employee service
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeUpdateComponent } from './employee-update/employee-update.component'; // Import the employee service
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    EmployeeListComponent // Add the registration component to declarations
+    EmployeeListComponent,
+    EmployeeUpdateComponent // Add the registration component to declarations
   ],
   imports: [
     MatSnackBarModule,

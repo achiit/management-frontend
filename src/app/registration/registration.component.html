@@ -56,6 +56,9 @@
             <label for="city">City:</label>
             <input type="text" placeholder="City" id="city" [(ngModel)]="employee.city" name="city">
           </div>
+          <div class="btn">
+            <button (click)="navigateToEmployeeList()" class="show-employee-list-button">Show Employee List</button>
+          </div>
         </div>
       </div>
       <div id="right" class="container">
@@ -108,7 +111,9 @@
             <label for="zipcode">ZIP Code:</label>
             <input type="text" placeholder="ZipCode" id="zipcode" [(ngModel)]="employee.zipcode" name="zipcode">
           </div>
+          
           <div class="btn"><button type="submit">Register</button></div>
+          
         </div>
       </div>
       <div *ngIf="emailExistsError" class="error-message">
